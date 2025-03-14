@@ -2,7 +2,11 @@
   <h2 class="mb-4">New Entry</h2>
   
   <%= form_with model: @entry, url: entries_path, html: { multipart: true }, class: "needs-validation" do |f| %>
-    
+
+    <!-- Hidden fields to store user_id and place_id -->
+    <%= f.hidden_field :user_id, value: session[:user_id] %>
+    <%= f.hidden_field :place_id, value: params[:place_id] %>
+
     <!-- Title Field -->
     <div class="mb-3">
       <%= f.label :title, class: "form-label" %>
