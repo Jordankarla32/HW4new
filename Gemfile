@@ -23,3 +23,7 @@ end
 group :production do
   gem "pg"
 end
+
+gem "mini_magick", "~> 5.2"
+
+gem "image_processing", "~> 1.14"
